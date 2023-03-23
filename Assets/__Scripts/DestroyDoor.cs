@@ -11,7 +11,7 @@ public class DestroyDoor : MonoBehaviour
     public GameObject buttonDestroy2;
     public GameObject buttonDestroy3;
     public MontyHallGame doorInt, timerCheck;
-    public bool openDoor = false;
+    public bool openDoor1 = false;
 
     // Update is called once per frame
     void Update()
@@ -26,7 +26,7 @@ public class DestroyDoor : MonoBehaviour
 
             doorDestroy1.GetComponent<Animation>().Play();
             Destroy(buttonDestroy1);
-            openDoor = true;
+            openDoor1 = true;
             
 
 
@@ -45,6 +45,9 @@ public class DestroyDoor : MonoBehaviour
         }
 
     }
+
+
+
 
     
 
