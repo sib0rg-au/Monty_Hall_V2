@@ -13,8 +13,11 @@ public class DestroyDoor : MonoBehaviour
     public MontyHallGame doorInt, timerCheck;
     public bool openDoor1 = false;
 
+    private float timer = 1;
     // Update is called once per frame
     void Update()
+
+    //public void OpenDoor()
     {
 
 
@@ -22,24 +25,38 @@ public class DestroyDoor : MonoBehaviour
         if (doorInt.playerChoice != 0 && doorInt.doorToOpen == 1 && timerCheck.expiredTimer == 0)
         {
             //doorDestroy1.GetComponent<Animation>().Play;
+            while (timer > 0)
+            {
+                timer -= Time.deltaTime;
+                doorDestroy1.GetComponent<Animation>().Play();
+            }
 
-
-            doorDestroy1.GetComponent<Animation>().Play();
+            
             Destroy(buttonDestroy1);
-            openDoor1 = true;
+            //openDoor1 = true;
             
 
 
         }
         else if (doorInt.playerChoice != 0 && doorInt.doorToOpen == 2 && timerCheck.expiredTimer == 0)
         {
-            doorDestroy2.GetComponent<Animation>().Play();
+            while (timer > 0)
+            {
+                timer -= Time.deltaTime;
+                doorDestroy2.GetComponent<Animation>().Play();
+            }
+            
             Destroy(buttonDestroy2);
             //Destroy(doorDestroy2);
         }
         else if (doorInt.playerChoice != 0 && doorInt.doorToOpen == 3 && timerCheck.expiredTimer == 0)
         {
-            doorDestroy3.GetComponent<Animation>().Play();
+            while (timer > 0)
+            {
+                timer -= Time.deltaTime;
+                doorDestroy3.GetComponent<Animation>().Play();
+            }
+            
             Destroy(buttonDestroy3);
             //Destroy(doorDestroy3);
         }

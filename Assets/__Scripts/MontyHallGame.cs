@@ -16,6 +16,8 @@ public class MontyHallGame : MonoBehaviour
     public Button Button2;
     public Button Button3;
 
+    public DestroyDoor openDoor;
+
     private bool gameRestarting;
 
     public float timer = 400;
@@ -59,6 +61,7 @@ public class MontyHallGame : MonoBehaviour
             {
                 timer = 0;
                 expiredTimer= 0;
+                
 
             }
         }

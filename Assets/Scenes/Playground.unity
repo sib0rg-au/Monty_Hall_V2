@@ -256,6 +256,25 @@ MonoBehaviour:
   plyrCh: {fileID: 135756641613574986}
   disableButton1: {fileID: 778612355}
   disableButton2: {fileID: 871514522}
+--- !u!1 &369327637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100092, guid: f054e366653a7c14186595569de398f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 450183252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &369327641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369327637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1661743, y: 2.4341261, z: 0.15107703}
+  m_Center: {x: -0.57335585, y: 0.62064147, z: 0.05420642}
 --- !u!1001 &450183252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -928,6 +947,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5393215579111688471}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &988742201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100092, guid: f054e366653a7c14186595569de398f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1378359923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &988742205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988742201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1661743, y: 2.4341261, z: 0.15107703}
+  m_Center: {x: -0.57335585, y: 0.62064147, z: 0.05420642}
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +1031,25 @@ Transform:
   m_Father: {fileID: 2114283753834967213}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1347268925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100092, guid: f054e366653a7c14186595569de398f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1455478936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1347268929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347268925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1661743, y: 2.4341261, z: 0.15107703}
+  m_Center: {x: -0.57335585, y: 0.62064147, z: 0.05420642}
 --- !u!1001 &1378359923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1787,6 +1844,7 @@ MonoBehaviour:
   buttonDestroy3: {fileID: 157391477}
   doorInt: {fileID: 135756641613574986}
   timerCheck: {fileID: 135756641613574986}
+  openDoor1: 0
 --- !u!1 &2114283753834967212
 GameObject:
   m_ObjectHideFlags: 0
