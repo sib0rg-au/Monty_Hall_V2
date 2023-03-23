@@ -312,6 +312,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: f054e366653a7c14186595569de398f9, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400002, guid: f054e366653a7c14186595569de398f9, type: 3}
+    - target: {fileID: 11100000, guid: f054e366653a7c14186595569de398f9, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
@@ -1105,6 +1109,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: f054e366653a7c14186595569de398f9, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400002, guid: f054e366653a7c14186595569de398f9, type: 3}
+    - target: {fileID: 11100000, guid: f054e366653a7c14186595569de398f9, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
@@ -1169,6 +1177,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: f054e366653a7c14186595569de398f9, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400002, guid: f054e366653a7c14186595569de398f9, type: 3}
     - target: {fileID: 11100000, guid: f054e366653a7c14186595569de398f9, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
