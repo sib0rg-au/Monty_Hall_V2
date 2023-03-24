@@ -20,46 +20,44 @@ public class Button1 : MonoBehaviour
 
         Debug.Log(collision.gameObject.name);
 
-       
         
-        if (collision.gameObject.name == "PlayerCapsule")
-        {
-            
-            if (timerCheck.round2Timer > 0)
-            
-            
+            if (collision.gameObject.name == "PlayerCapsule")
             {
-                Debug.Log("Button green");
-                GetComponent<Renderer>().material.color = Color.green;
-                GetComponent<SphereCollider>().enabled = false;
+                Debug.Log("Yellow");
+                if (timerCheck.round2Timer > 0)
+            {
+                GetComponent<Renderer>().material.color = Color.yellow;
                 plyrCh.playerChoice = 1;
-
+            }
+                else
+            {
+                secondChoice.swapOrStay = 1;
+                GetComponent<Renderer>().material.color = Color.green;
+                
+                //stop the player from selecting another button once final choice is made
                 disableButton2.GetComponent<SphereCollider>().enabled = false;
                 disableButton3.GetComponent<SphereCollider>().enabled = false;
-
-
             }
 
-            else 
-                
-                if (openedDoor.doorToOpen != 1)
-            {
-                GetComponent<SphereCollider>().enabled = true;
-                secondChoice.swapOrStay = 1;
-
-            }
+            
 
 
-
-
-
-
+           
         }
+
+            
+        
+
+
+                
+
        
 
 
 
-       
+
+
+
 
 
 

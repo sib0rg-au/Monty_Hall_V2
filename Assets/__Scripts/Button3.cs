@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button3 : MonoBehaviour
 {
-    public MontyHallGame plyrCh;
+    public MontyHallGame plyrCh, timerCheck, secondChoice;
     public Button1 disableButton1;
     public Button2 disableButton2;
     void OnCollisionEnter(Collision collision)
@@ -15,12 +15,21 @@ public class Button3 : MonoBehaviour
         if (collision.gameObject.name == "PlayerCapsule")
         {
             Debug.Log("Button green");
-            GetComponent<Renderer>().material.color = Color.green;
+            if (timerCheck.round2Timer > 0)
+            {
+                GetComponent<Renderer>().material.color = Color.yellow;
+                plyrCh.playerChoice = 3;
+                Debug.Log("Yellow");
+            }
+            else
+            {
+                secondChoice.swapOrStay = 3;
+                GetComponent<Renderer>().material.color = Color.green;
+                disableButton2.GetComponent<SphereCollider>().enabled = false;
+                disableButton1.GetComponent<SphereCollider>().enabled = false;
+            }
 
-            plyrCh.playerChoice = 3;
-
-            disableButton2.GetComponent<SphereCollider>().enabled = false;
-            disableButton1.GetComponent<SphereCollider>().enabled = false;
+            
         }
 
 

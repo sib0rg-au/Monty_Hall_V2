@@ -254,6 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plyrCh: {fileID: 135756641613574986}
+  timerCheck: {fileID: 135756641613574986}
+  secondChoice: {fileID: 135756641613574986}
   disableButton1: {fileID: 778612355}
   disableButton2: {fileID: 871514522}
 --- !u!1 &369327637 stripped
@@ -567,6 +569,7 @@ MonoBehaviour:
   plyrCh: {fileID: 135756641613574986}
   timerCheck: {fileID: 135756641613574986}
   secondChoice: {fileID: 135756641613574986}
+  openedDoor: {fileID: 135756641613574986}
   disableButton2: {fileID: 871514522}
   disableButton3: {fileID: 157391483}
 --- !u!4 &812040121 stripped
@@ -703,6 +706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plyrCh: {fileID: 135756641613574986}
+  timerCheck: {fileID: 135756641613574986}
+  secondChoice: {fileID: 135756641613574986}
   disableButton1: {fileID: 778612355}
   disableButton3: {fileID: 157391483}
 --- !u!1 &874605735
@@ -1923,11 +1928,14 @@ MonoBehaviour:
   swapOrStay: 0
   doorToOpen: 0
   expiredTimer: 1
-  Button1: {fileID: 0}
-  Button2: {fileID: 0}
-  Button3: {fileID: 0}
-  openDoor: {fileID: 0}
-  timer: 5
+  carSpawn: 0
+  openDoor: {fileID: 135756641613574991}
+  spawnCar: {fileID: 135756641613574991}
+  doorAnimate: {fileID: 0}
+  NewCar: {fileID: 3294564219125457607, guid: 8a8f57edf3523624eb9f886833e8e97a, type: 3}
+  timer: 1
+  round2Timer: 1
+  endGameTimer: 1
 --- !u!114 &135756641613574991
 MonoBehaviour:
   m_ObjectHideFlags: 0
