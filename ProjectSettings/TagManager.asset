@@ -9,6 +9,11 @@ TagManager:
   - Button2
   - Button3
   - PlayerChoice
+  - Sheep
+  - Cow
+  - Chicken
+  - Pig
+  - Ground
   layers:
   - Default
   - TransparentFX
