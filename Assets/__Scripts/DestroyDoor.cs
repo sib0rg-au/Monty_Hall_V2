@@ -30,10 +30,11 @@ public class DestroyDoor : MonoBehaviour
     {
 
 
+        //Once a player has made a choice, the timer has ended and door to open selected, then open the door and spawn the sheep
 
         if (doorInt.playerChoice != 0 && doorInt.doorToOpen == 1 && timerCheck.expiredTimer == 0)
         {
-            //doorDestroy1.GetComponent<Animation>().Play;
+            //Play the animation and spawn the sheep if the door to open is door 1
             while (timer > 0)
             {
                 timer -= Time.deltaTime;
@@ -46,14 +47,17 @@ public class DestroyDoor : MonoBehaviour
                 Instantiate(sheep, spawnPoint1.transform);
                 spawn1 = true;
             }
+            //deactivate button by removing its collider and changing colour to clear
+            buttonDestroy1.GetComponent<SphereCollider>().enabled = false;
+            buttonDestroy1.GetComponent<Renderer>().material.color = Color.clear;
             
-            
-            Destroy(buttonDestroy1);
+            //Destroy(buttonDestroy1);
             //openDoor1 = true;
             
 
 
         }
+        //Play the animation to open door 2 and spawn the sheep if the door to open is door 2
         else if (doorInt.playerChoice != 0 && doorInt.doorToOpen == 2 && timerCheck.expiredTimer == 0)
         {
             while (timer > 0)
@@ -68,10 +72,13 @@ public class DestroyDoor : MonoBehaviour
                 spawn2 = true;
             }
 
-
-            Destroy(buttonDestroy2);
+            buttonDestroy2.GetComponent<SphereCollider>().enabled = false;
+            buttonDestroy2.GetComponent<Renderer>().material.color = Color.clear;
+            //Destroy(buttonDestroy2);
             //Destroy(doorDestroy2);
         }
+
+        //Play the animation to open door 3 and spawn the sheep if the door to open is door 3
         else if (doorInt.playerChoice != 0 && doorInt.doorToOpen == 3 && timerCheck.expiredTimer == 0)
         {
             while (timer > 0)
@@ -86,7 +93,9 @@ public class DestroyDoor : MonoBehaviour
                 spawn3 = true;
             }
 
-            Destroy(buttonDestroy3);
+            buttonDestroy3.GetComponent<SphereCollider>().enabled = false;
+            buttonDestroy3.GetComponent<Renderer>().material.color = Color.clear;
+            //Destroy(buttonDestroy3);
             //Destroy(doorDestroy3);
         }
 
