@@ -71,6 +71,7 @@ public class MontyHallGame : MonoBehaviour
             {
                 timer = 0;
                 expiredTimer= 0;
+                Debug.Log("You chose door " + playerChoice);
                 
 
             }
@@ -103,6 +104,7 @@ public class MontyHallGame : MonoBehaviour
      if (swapOrStay != 0)
         {
             round3Timer -= Time.deltaTime;
+            Debug.Log("Your final choice is door " + swapOrStay);
             if (round3Timer < 0)
             {
                 round3Timer = 0;
