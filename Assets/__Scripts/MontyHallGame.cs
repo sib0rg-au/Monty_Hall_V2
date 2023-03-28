@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MontyHallGame : MonoBehaviour
@@ -13,6 +14,7 @@ public class MontyHallGame : MonoBehaviour
     public int doorToOpen;
     public int expiredTimer = 1;
     public int carSpawn = 0;
+    public int roundNumber = 0;
 
     //public Button Button1;
     //public Button Button2;
@@ -24,10 +26,14 @@ public class MontyHallGame : MonoBehaviour
 
     private bool gameRestarting;
     private bool carSpawned = false;
+    public float sceneEndTimer = 5;
 
     public float timer = 400;
-    public float round2Timer = 5;
+    public float round2Timer = 2;
     public float round3Timer = 5;
+    
+
+
     
 
 
@@ -41,8 +47,28 @@ public class MontyHallGame : MonoBehaviour
             Random.Range(1, 4);
 
 
+       
+        roundNumber = PlayerPrefs.GetInt("Round") + 1;
+
+        
+        //Reset game after round 5
+        if (roundNumber > 4)
+        {
+            PlayerPrefs.SetInt("Round", roundNumber = 1);
+        }
+
+}
+
+    //save and load round numbers using PlayerPrefs
+    public void SaveRound()
+    {
+        PlayerPrefs.SetInt("Round", roundNumber = roundNumber++);
     }
 
+    public void LoadRound()
+    {
+        roundNumber = PlayerPrefs.GetInt("Round");
+    }
    
     // Update is called once per frame
     void Update()
@@ -89,9 +115,27 @@ public class MontyHallGame : MonoBehaviour
             }
            
 
-        }  
-     //Once the player has made their second choice, start a timer to reveal the winning door and prize
-     if (swapOrStay != 0)
+        }
+     //add a restart to the scene once timer reaches zero or below and add one to the round number
+        if (sceneEndTimer > 0 && round3Timer == 0)
+        {
+            sceneEndTimer -= Time.deltaTime;
+            if (sceneEndTimer <= 0)
+            {
+                //SceneManager.LoadScene("Playground");
+                SaveRound();
+                Application.LoadLevel("Playground");
+                LoadRound();
+                Debug.Log("Round number is " + roundNumber);
+
+                //roundNumber = PlayerPrefs.GetInt("Round", roundNumber++);
+
+            }
+      
+
+        }
+        //Once the player has made their second choice, start a timer to reveal the winning door and prize
+        if (swapOrStay != 0)
         {
             round3Timer -= Time.deltaTime;
             Debug.Log("Your final choice is door " + swapOrStay);
@@ -145,7 +189,19 @@ public class MontyHallGame : MonoBehaviour
                         Debug.Log("You didn't win this time and you changed your choice!");
                     }
                 }
+
+               
+                
+
+
+
             }
+
+           
         } 
     }
 }
+//if (sceneEndTimer <= 0)
+//{
+   // SceneManager.LoadScene("Playground");
+//}
