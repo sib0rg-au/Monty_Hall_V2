@@ -25,6 +25,8 @@ public class Button3 : MonoBehaviour
             {
                 secondChoice.swapOrStay = 3;
                 GetComponent<Renderer>().material.color = Color.green;
+
+                //stop the player from selecting another button once final choice is made
                 disableButton2.GetComponent<SphereCollider>().enabled = false;
                 disableButton1.GetComponent<SphereCollider>().enabled = false;
             }

@@ -36,34 +36,23 @@ public class MontyHallGame : MonoBehaviour
 
     void Start()
     {
+        //pick a winning door
         winningDoor = 
             Random.Range(1, 4);
 
 
     }
 
-    
-
-    public void CollideButton(int buttonSelect)
-    {
-
-    }
-
-    public int PlayerChoice(int playerChoice)
-    {
-
-
-        return playerChoice;
-    }
-
+   
     // Update is called once per frame
     void Update()
     {
-      while(doorToOpen == winningDoor ||doorToOpen == playerChoice)
+      //pick a door to open, that is not the player choice or the winning door
+        while(doorToOpen == winningDoor ||doorToOpen == playerChoice)
         {
             doorToOpen = Random.Range(1, 4);
         }
-
+//Once the player has made a choice, start the first timer
         if (playerChoice != 0)
         {
             timer -= Time.deltaTime;
@@ -76,10 +65,11 @@ public class MontyHallGame : MonoBehaviour
 
             }
         }
-       
+      
+        
      if(expiredTimer == 0)
         {
-            //round 2 timer is added to provide instructions and a delay before remaining button are reactivated
+            //round 2 timer is added to provide instructions and a delay before remaining buttons are reactivated
            if (round2Timer > 0)
             {
                 round2Timer -= Time.deltaTime;
@@ -100,7 +90,7 @@ public class MontyHallGame : MonoBehaviour
            
 
         }  
-
+     //Once the player has made their second choice, start a timer to reveal the winning door and prize
      if (swapOrStay != 0)
         {
             round3Timer -= Time.deltaTime;
@@ -108,7 +98,7 @@ public class MontyHallGame : MonoBehaviour
             if (round3Timer < 0)
             {
                 round3Timer = 0;
-                while (winningDoor ==1 && carSpawned == false)
+                while (winningDoor == 1 && carSpawned == false)
                 {
                     //spawn in the car and open the door
                     Instantiate(NewCar, spawnCar.spawnPoint1.transform);
@@ -130,7 +120,7 @@ public class MontyHallGame : MonoBehaviour
                     carSpawned = true;
                 }
 
-                //Check winning conditions for the probability game
+                //Check winning conditions for the probability game and play relevent audio (here as a debug log)
                 if(swapOrStay == winningDoor)
                 {
                     if (playerChoice == swapOrStay)

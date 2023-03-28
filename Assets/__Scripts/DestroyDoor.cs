@@ -32,9 +32,11 @@ public class DestroyDoor : MonoBehaviour
 
         //Once a player has made a choice, the timer has ended and door to open selected, then open the door and spawn the sheep
 
+
+        //Play the animation and spawn the sheep if the door to open is door 1
         if (doorInt.playerChoice != 0 && doorInt.doorToOpen == 1 && timerCheck.expiredTimer == 0)
         {
-            //Play the animation and spawn the sheep if the door to open is door 1
+            
             while (timer > 0)
             {
                 timer -= Time.deltaTime;
@@ -50,10 +52,8 @@ public class DestroyDoor : MonoBehaviour
             //deactivate button by removing its collider and changing colour to clear
             buttonDestroy1.GetComponent<SphereCollider>().enabled = false;
             buttonDestroy1.GetComponent<Renderer>().material.color = Color.clear;
-            
-            //Destroy(buttonDestroy1);
-            //openDoor1 = true;
-            
+
+
 
 
         }
@@ -74,8 +74,7 @@ public class DestroyDoor : MonoBehaviour
 
             buttonDestroy2.GetComponent<SphereCollider>().enabled = false;
             buttonDestroy2.GetComponent<Renderer>().material.color = Color.clear;
-            //Destroy(buttonDestroy2);
-            //Destroy(doorDestroy2);
+            
         }
 
         //Play the animation to open door 3 and spawn the sheep if the door to open is door 3
@@ -95,8 +94,7 @@ public class DestroyDoor : MonoBehaviour
 
             buttonDestroy3.GetComponent<SphereCollider>().enabled = false;
             buttonDestroy3.GetComponent<Renderer>().material.color = Color.clear;
-            //Destroy(buttonDestroy3);
-            //Destroy(doorDestroy3);
+            
         }
 
     }
