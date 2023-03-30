@@ -21,7 +21,8 @@ public class DestroyDoor : MonoBehaviour
     public bool spawn1 = false;
     public bool spawn2 = false;
     public bool spawn3 = false;
-
+    
+    //timer below used to play animation for a specific time
     private float timer = 1;
     // Update is called once per frame
     void Update()

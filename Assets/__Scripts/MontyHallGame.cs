@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,11 +23,13 @@ public class MontyHallGame : MonoBehaviour
 
     public DestroyDoor openDoor, spawnCar, doorAnimate;
     public GameObject NewCar;
-    
+    public AudioScript sound;
+    public Audio2Script sound2;
 
     private bool gameRestarting;
     private bool carSpawned = false;
     public float sceneEndTimer = 5;
+    private bool audioOn = true;
 
     public float timer = 400;
     public float round2Timer = 2;
@@ -46,10 +49,12 @@ public class MontyHallGame : MonoBehaviour
         winningDoor = 
             Random.Range(1, 4);
 
-
+      
        
         roundNumber = PlayerPrefs.GetInt("Round") + 1;
 
+
+        
         
         //Reset game after round 5
         if (roundNumber > 4)
@@ -57,6 +62,8 @@ public class MontyHallGame : MonoBehaviour
             PlayerPrefs.SetInt("Round", roundNumber = 1);
         }
 
+        sound.PlayAudio();
+        
 }
 
     //save and load round numbers using PlayerPrefs
@@ -73,6 +80,7 @@ public class MontyHallGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
       //pick a door to open, that is not the player choice or the winning door
         while(doorToOpen == winningDoor ||doorToOpen == playerChoice)
         {
@@ -82,6 +90,13 @@ public class MontyHallGame : MonoBehaviour
         if (playerChoice != 0)
         {
             timer -= Time.deltaTime;
+
+            
+            
+            sound2.PlayAudio2();
+                
+            
+
             if (timer < 0)
             {
                 timer = 0;
