@@ -63,6 +63,8 @@ public class MontyHallGame : MonoBehaviour
         }
 
         sound.PlayAudio();
+        sound.ExplainInitial();
+          
         
 }
 
@@ -91,11 +93,20 @@ public class MontyHallGame : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
-            
-            
-            sound.PlayAudio2();
+
+
+            if (roundNumber != 3)
+            {
                 
+                sound.PlayAudio2();
+            }
             
+            if (roundNumber== 3)
+            {
+                sound.ExplainSecondChoice();
+            }
+
+
 
             if (timer < 0)
             {
@@ -103,7 +114,7 @@ public class MontyHallGame : MonoBehaviour
                 expiredTimer= 0;
                 Debug.Log("You chose door " + playerChoice);
                 //sound.PlayAudio2();
-
+               
                 
 
             }
@@ -119,6 +130,7 @@ public class MontyHallGame : MonoBehaviour
                 if (round2Timer < 0)
                 {
                     round2Timer = 0;
+
                 }
 
             }

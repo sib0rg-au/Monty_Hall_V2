@@ -4846,7 +4846,7 @@ MonoBehaviour:
   sound: {fileID: 135756641613574997}
   sound2: {fileID: 0}
   sceneEndTimer: 5
-  timer: 5
+  timer: 10
   round2Timer: 5
   round3Timer: 5
 --- !u!114 &135756641613574991
@@ -4988,6 +4988,13 @@ MonoBehaviour:
   round: {fileID: 135756641613574986}
   audioSource: {fileID: 135756641613574996}
   clip: {fileID: 8300000, guid: 7e70ff9d4dc40144fa3d6bce6e19c47e, type: 3}
+  clip2: {fileID: 8300000, guid: 937021cf24092a1429eeba006961e211, type: 3}
+  winSwap: {fileID: 8300000, guid: 54ef7db56a0846e4bb71872699c59461, type: 3}
+  winStay: {fileID: 8300000, guid: d90a3c703b738af468e37a20de571da2, type: 3}
+  loseStay: {fileID: 8300000, guid: 031422952b179cc419949450c01cc50c, type: 3}
+  loseSwap: {fileID: 8300000, guid: 759ff3fc7e38b9d498ad9d3aabeb7bdc, type: 3}
+  explainRound1: {fileID: 8300000, guid: 428b7a2cc752c3d478c2224f3ff05ff2, type: 3}
+  explainRound2: {fileID: 8300000, guid: d6f6e679dfbb0a447a48993d576d6664, type: 3}
 --- !u!1 &2114283753834967212
 GameObject:
   m_ObjectHideFlags: 0

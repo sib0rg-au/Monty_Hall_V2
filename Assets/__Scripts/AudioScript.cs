@@ -13,9 +13,12 @@ public class AudioScript : MonoBehaviour
     public AudioClip winStay;
     public AudioClip loseStay;
     public AudioClip loseSwap;
+    public AudioClip explainRound1;
+    public AudioClip explainRound2;
     public const string audioName = "Introduction Audio.mp3";
     private bool switchedOn = true;
     private bool endAudio = true;
+    private bool explain2 = true;
 
 
 
@@ -80,5 +83,26 @@ public class AudioScript : MonoBehaviour
             GetComponent<AudioSource>().Play();
             endAudio = false;
         }
+    }
+
+    public void ExplainInitial()
+    {
+        if (round.roundNumber == 3)
+        {
+            GetComponent<AudioSource>().clip = explainRound1;
+            GetComponent<AudioSource>().Play();
+        }
+    }
+
+    public void ExplainSecondChoice()
+    {
+        if (explain2 == true)
+            if(round.roundNumber == 3)
+            {
+                GetComponent<AudioSource>().clip = explainRound2;
+                GetComponent<AudioSource>().Play();
+            }
+        
+        explain2 = false;
     }
 }
