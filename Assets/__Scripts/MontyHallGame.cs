@@ -93,7 +93,7 @@ public class MontyHallGame : MonoBehaviour
 
             
             
-            //sound2.PlayAudio2();
+            sound.PlayAudio2();
                 
             
 
@@ -102,6 +102,8 @@ public class MontyHallGame : MonoBehaviour
                 timer = 0;
                 expiredTimer= 0;
                 Debug.Log("You chose door " + playerChoice);
+                //sound.PlayAudio2();
+
                 
 
             }
@@ -185,11 +187,12 @@ public class MontyHallGame : MonoBehaviour
                     if (playerChoice == swapOrStay)
                     {
                         Debug.Log("You chose correctly and stuck to your choice!");
-
+                        sound.WinStay();
                     }
                     else
                     {
                         Debug.Log("You chose correctly by changing your mind!");
+                        sound.WinSwap();
                     }    
                         
                 }
@@ -198,10 +201,12 @@ public class MontyHallGame : MonoBehaviour
                     if (playerChoice == swapOrStay)
                     {
                         Debug.Log("You didn't win this time and you stuck with your decision");
+                        sound.LoseStay();
                     }
                     else
                     {
                         Debug.Log("You didn't win this time and you changed your choice!");
+                        sound.LoseSwap();
                     }
                 }
 

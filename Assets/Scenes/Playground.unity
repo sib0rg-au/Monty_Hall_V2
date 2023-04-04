@@ -4442,6 +4442,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 2117574488056135725, guid: 09aade0ecefd01e4b8f7661acf64f5c2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3974884623226063105, guid: 09aade0ecefd01e4b8f7661acf64f5c2,
         type: 3}
       propertyPath: m_Radius
@@ -4842,7 +4847,7 @@ MonoBehaviour:
   sound2: {fileID: 0}
   sceneEndTimer: 5
   timer: 5
-  round2Timer: 15
+  round2Timer: 5
   round3Timer: 5
 --- !u!114 &135756641613574991
 MonoBehaviour:
