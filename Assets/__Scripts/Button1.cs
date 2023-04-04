@@ -20,12 +20,13 @@ public class Button1 : MonoBehaviour
 
         Debug.Log(collision.gameObject.name);
 
-        
+        //check for a collision
             if (collision.gameObject.name == "PlayerCapsule")
             {
                 Debug.Log("Yellow");
                 if (timerCheck.round2Timer > 0)
             {
+                //change button colour
                 GetComponent<Renderer>().material.color = Color.yellow;
                 plyrCh.playerChoice = 1;
             }

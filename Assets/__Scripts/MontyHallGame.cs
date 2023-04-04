@@ -93,7 +93,7 @@ public class MontyHallGame : MonoBehaviour
 
             
             
-            sound2.PlayAudio2();
+            //sound2.PlayAudio2();
                 
             
 
