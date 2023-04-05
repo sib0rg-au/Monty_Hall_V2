@@ -17,23 +17,19 @@ public class MontyHallGame : MonoBehaviour
     public int carSpawn = 0;
     public int roundNumber = 0;
 
-    //public Button Button1;
-    //public Button Button2;
-    //public Button Button3;
-
     public DestroyDoor openDoor, spawnCar, doorAnimate;
     public GameObject NewCar;
     public AudioScript sound;
     public Audio2Script sound2;
 
-    private bool gameRestarting;
+    
     private bool carSpawned = false;
-    public float sceneEndTimer = 5;
-    private bool audioOn = true;
+    public float sceneEndTimer = 6;
+    
 
-    public float timer = 400;
-    public float round2Timer = 2;
-    public float round3Timer = 5;
+    public float timer = 11;
+    public float round2Timer = 6;
+    public float round3Timer = 6;
     
 
 
@@ -49,8 +45,8 @@ public class MontyHallGame : MonoBehaviour
         winningDoor = 
             Random.Range(1, 4);
 
-      
-       
+        
+
         roundNumber = PlayerPrefs.GetInt("Round") + 1;
 
 
@@ -62,6 +58,7 @@ public class MontyHallGame : MonoBehaviour
             PlayerPrefs.SetInt("Round", roundNumber = 1);
         }
 
+       
         sound.PlayAudio();
         sound.ExplainInitial();
           
@@ -135,13 +132,7 @@ public class MontyHallGame : MonoBehaviour
 
             }
 
-           if (round2Timer == 0)
-            {
-                if (doorToOpen == 1)
-                {
-                    //addB2Collider.AddComponent<SphereCollider>();
-                }
-            }
+           
            
 
         }
@@ -233,7 +224,3 @@ public class MontyHallGame : MonoBehaviour
         } 
     }
 }
-//if (sceneEndTimer <= 0)
-//{
-   // SceneManager.LoadScene("Playground");
-//}

@@ -15,6 +15,7 @@ public class AudioScript : MonoBehaviour
     public AudioClip loseSwap;
     public AudioClip explainRound1;
     public AudioClip explainRound2;
+    public AudioClip intro;
     public const string audioName = "Introduction Audio.mp3";
     private bool switchedOn = true;
     private bool endAudio = true;
@@ -22,6 +23,7 @@ public class AudioScript : MonoBehaviour
 
 
 
+//Play intro audio only on first round
     public void PlayAudio()
     {
         if (round.roundNumber == 1) 
@@ -32,7 +34,7 @@ public class AudioScript : MonoBehaviour
 
         
     }
-
+    //Play round 2 audio, every round
     public void PlayAudio2()
     {
         if (switchedOn == true)
@@ -44,7 +46,7 @@ public class AudioScript : MonoBehaviour
 
 
     } 
-    
+    //code for audio to play based on winning conditions
     public void WinSwap()
     {
         if(endAudio== true)
@@ -84,7 +86,7 @@ public class AudioScript : MonoBehaviour
             endAudio = false;
         }
     }
-
+    //code for round 3 audio explaining the probabilities
     public void ExplainInitial()
     {
         if (round.roundNumber == 3)
@@ -105,4 +107,6 @@ public class AudioScript : MonoBehaviour
         
         explain2 = false;
     }
+
+   
 }
